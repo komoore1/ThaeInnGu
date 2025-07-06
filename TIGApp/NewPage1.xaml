@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:tigapp="clr-namespace:TIGApp"
+             x:Class="TIGApp.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout>
+        <!--<Label Text="Notes" HorizontalOptions="Center"
+               TextColor="{x:Static Member=tigapp:SharedResources.FontColor}"
+               FontAttributes="Bold"/>
+        <Editor x:Name="editor"
+                Placeholder="Enter your note"
+                TextColor="{x:Static Member=tigapp:SharedResources.FontColor}"
+                HeightRequest="{OnPlatform 100, Android=500, iOS=500}" />
+        <Grid ColumnDefinitions="Auto, 30, Auto">
+            <Button Grid.Column="0"
+                    Text="Save" 
+                    WidthRequest="100"
+                    BackgroundColor="{x:Static Member=tigapp:SharedResources.BackgroundColor}"
+                    Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="2"
+                    Text="Delete" 
+                     WidthRequest="100"
+                    Clicked="OnDeleteButtonClicked" />
+            
+        </Grid>-->
+        <VerticalStackLayout Padding="40" Spacing="10">
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Bill" WidthRequest="100" VerticalOptions="Center" />
+                <Entry x:Name="billInput" Placeholder="Enter Amount" Keyboard="Numeric" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Margin="0,20,0,0" Spacing="10">
+                <Label Text="Tip" WidthRequest="100"  />
+                <Label x:Name="tipOutput" Text="0.00" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Total" WidthRequest="100" />
+                <Label x:Name="totalOutput" Text="0.00" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout VerticalOptions="End" Spacing="10">
+                <Label Text="Tip Percentage" />
+                <Label x:Name="tipPercent" Text="15%" />
+            </HorizontalStackLayout>
+            <Slider x:Name="tipPercentSlider" Minimum="0" Maximum="100" Value="15" />
+            <HorizontalStackLayout Margin="0,20,0,0" Spacing="10">
+                <Button Text="15%" Clicked="OnNormalTip" HorizontalOptions="Center"  WidthRequest="150"/>
+                <Button Text="20%" Clicked="OnGenerousTip" HorizontalOptions="Center" WidthRequest="150" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Margin="0,20,0,0" Spacing="10">
+                <Button x:Name="roundDown" Text="Round Down" HorizontalOptions="Center" WidthRequest="150"/>
+                <Button x:Name="roundUp"   Text="Round Up" HorizontalOptions="Center" WidthRequest="150" />
+            </HorizontalStackLayout>
+                
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+    
+</ContentPage>
