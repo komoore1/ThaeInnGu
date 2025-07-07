@@ -12,3 +12,6 @@ A .NET MAUI (MVVM + DDD) desktop app with Azure SQL backend.
 ## Requirements
 - .NET 8 SDK
 - SQL Server (local or Docker/Azure)
+
+## .Net MAUI Training page link
+https://learn.microsoft.com/en-us/training/paths/build-apps-with-dotnet-maui/
